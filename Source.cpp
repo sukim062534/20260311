@@ -1,27 +1,35 @@
 #include <iostream>
+#include "StringUtil.h"
 
 using namespace std;
 
+
+
+
 int main()
-{	//문자열 갯수 세기
-	//문자열 중에서 특정 문자를 특정문 바꾸기
-	//문자열 중에서 특정 문자 위치 찾기
+{	
+	int A = 10;
+	char Temp[100] = {"Hello World"};
+	//for (int i = 0; i < 100; ++i)
+	//{
+	//	Temp[i] = 'A';
+	//}
 
-	int A[3] = { 1,2,3 };
-	char B[6] = { 'H','E', 'L', 'L','O', '\0' };
+	int StringLEngth = Length(Temp, 100);
 
-	char* C = B;
-	C[3] = 'Q';
-	cout << C << endl;
+	cout << StringLEngth << endl;
 
-	for (int i = 0; i < 6; i++)
+	if(false)
 	{
-		if (C[i] == 'Q')
-		{
-			break;
-		}
-		cout << C[i];
+		int A = 20;
+		cout << &A << endl;
 	}
+	
+	cout << &A << endl;
+	
+	Replace(Temp, 100, 'l', 'f');
+	Temp[99] = 0;
+	cout << Temp << endl;
 
 	return 0;
 }
