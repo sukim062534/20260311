@@ -4,25 +4,26 @@
 using namespace std;
 
 
-
+//숫자를 입력 받아 그 크기로 숫자 배열을 만들어서
+//1부터 크기까지 초기화 하고 출력하는 프로그램 만들어 보세요
 int main()
 {	
-	//cumputer memory unmanaged language / human managed language
-	int Size = 100;
-	//heap에 동적으로 int 사이즈 만들고 주소 반환
-	int* Players = new int[Size];
-	Players[3] = 10;
+	int Size = 0;
 
-	
-	//delete Players; //첫번째만 반환하고 나머지 99칸은 인어버림 메모리 릭 발생
-	delete[] Players; //포인터 변수의 주소부터 할당 받은 배열 만큼의 heap 영역 반환
+	cin >> Size;
+
+	int* Players = new int[Size];
+
+	for (int i = 0; i < Size; ++i)
+	{
+		*(Players + 1) = i + 1;
+
+		cout << *(Players + 1)<<", ";
+	}
+
+	delete[] Players;
 
 	Players = nullptr;
-
-	if (Players) 
-	{
-
-	}
 
 	return 0;
 }
